@@ -1,0 +1,214 @@
+{
+  "users": [
+    {
+      "name": "8888888888",
+      "email": "adadaadad@ada.aa",
+      "password": "8888888888",
+      "id": 1
+    },
+    {
+      "name": "777777778",
+      "email": "77777777@77.777",
+      "password": "77777777",
+      "id": 2
+    },
+    {
+      "name": "Felelerr12",
+      "email": "eeeee@ee.ee",
+      "password": "eeeeeeeeee",
+      "id": 3
+    },
+    {
+      "name": "AbdolRahmanAbdelNasser",
+      "email": "AbdoFelfel@yahoo.com",
+      "password": "0123456789",
+      "id": 4
+    }
+  ],
+  "locations": [
+    {
+      "name": "Egypt-KFC-كنتاكي",
+      "Phone": "0155566555",
+      "address": "دجاج كنتاكي فرع جسر شبرا بالقاهرة",
+      "userId": 2,
+      "id": 1
+    },
+    {
+      "name": "Egypt-KFC-كنتاكي",
+      "Phone": "0112266655",
+      "address": "36FX+938، جسر شبرا، قسم شبرا، محافظة القاهرة‬ 4342118",
+      "userId": 2,
+      "id": 2
+    },
+    {
+      "name": "Egypt-KFC-كنتاكي",
+      "Phone": "01225588636",
+      "address": "3796+F4C, شارع كوبرى باغوص الشرابية قسم،, الشرابية، قسم الشرابية، محافظة القاهرة‬ 4360061",
+      "userId": 2,
+      "id": 3
+    },
+    {
+      "name": "دجاج كنتاكي",
+      "Phone": "012558887777",
+      "address": "16 ميدان الخلفاوى، شبرا، القاهرة، محافظة القاهرة‬ 4350216",
+      "userId": 2,
+      "id": 4
+    },
+    {
+      "name": "KFC دجاج كنتاك فرع العباسية",
+      "Phone": "015566992277",
+      "address": "العباسية الشرقية، الوايلى، محافظة القاهرة‬ 4391004",
+      "userId": 2,
+      "id": 5
+    },
+    {
+      "name": "دجاج كنتاكي فرع الشيخ العناني حدائق القبة",
+      "Phone": "011447777222",
+      "address": "115 الشيخ العناني، الخاصة، قسم حدائق القبة، محافظة القاهرة‬ 4381611",
+      "userId": 2,
+      "id": 6
+    },
+    {
+      "name": "KFC دجاج كنتاكي فرع شارع الجمهورية",
+      "Phone": "0115558888",
+      "address": "363W+5MM، شارع الجمهورية، عرابي، الأزبكية، محافظة القاهرة‬ 4320102",
+      "userId": 2,
+      "id": 7
+    },
+    {
+      "name": "مطعام صبحي كابر",
+      "Phone": "015002288",
+      "address": "روض الفرج",
+      "userId": 2,
+      "id": 9
+    },
+    {
+      "name": "Hooks Fish And Chips",
+      "Phone": "123.456.789",
+      "address": "Minneapolis, MN",
+      "userId": 1,
+      "id": 10
+    },
+    {
+      "name": "Burger King",
+      "Phone": "123.258.369",
+      "address": "Cairo, Egypt",
+      "userId": 1,
+      "id": 11
+    },
+    {
+      "name": "Pizza Hut Restaurants",
+      "Phone": "369.258.147",
+      "address": "Alex, Egypt",
+      "userId": 1,
+      "id": 12
+    },
+    {
+      "name": "Hooks Fish And Chicen",
+      "Phone": "01140062724",
+      "address": "Egypt , Cairo",
+      "userId": 4,
+      "id": 13
+    }
+  ],
+  "categories": [
+    {
+      "name": "Breakfast",
+      "userId": 2,
+      "locations": 1,
+      "id": 13
+    },
+    {
+      "name": "Fried Meals",
+      "userId": 1,
+      "locationId": 10,
+      "id": 14
+    },
+    {
+      "name": "Dinners",
+      "userId": 1,
+      "locationId": 10,
+      "id": 15
+    },
+    {
+      "name": "Grilled Meals",
+      "userId": 1,
+      "locationId": 10,
+      "id": 16
+    },
+    {
+      "name": "Kids Meals",
+      "userId": 1,
+      "locationId": 10,
+      "id": 17
+    },
+    {
+      "name": "Breakfast",
+      "userId": 4,
+      "locationId": 13,
+      "id": 18
+    }
+  ],
+  "items": [
+    {
+      "name": "Truna Sandwich",
+      "price": "4444.00",
+      "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veritatis aperiam iusto voluptatum molestiae iste, nisi",
+      "qty": 14444,
+      "userId": 1,
+      "locId": 10,
+      "catId": 14,
+      "id": 1
+    },
+    {
+      "name": "Truna Sandwich1",
+      "price": "55625.00",
+      "description": "Voluptatem dolor consequatur velit recusandae, eius nulla voluptates illum necessitatibus saepe!",
+      "qty": 18548,
+      "userId": 1,
+      "locId": 10,
+      "catId": 14,
+      "id": 2
+    },
+    {
+      "name": "Truna Sandwich 1",
+      "price": "14455.00",
+      "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veritatis aperiam iusto voluptatum molestiae iste, nisi",
+      "qty": 1898,
+      "userId": 2,
+      "locId": 1,
+      "catId": 22,
+      "id": 3
+    },
+    {
+      "name": "Truna Sandwich Tow",
+      "price": "8899.00",
+      "description": "Voluptatem dolor consequatur velit recusandae, eius nulla voluptates illum necessitatibus saepe!",
+      "qty": 188,
+      "userId": 2,
+      "locId": 1,
+      "catId": 23,
+      "id": 4
+    },
+    {
+      "name": "Truna Sandwich 3",
+      "price": "66633.00",
+      "description": "Voluptatem dolor consequatur velit recusandae, eius nulla voluptates illum necessitatibus saepe!",
+      "qty": 19,
+      "userId": 2,
+      "locId": 1,
+      "catId": 22,
+      "id": 5
+    },
+    {
+      "name": "Egg Rolls",
+      "price": "15.99",
+      "description": "Best in Town Breakfast",
+      "qty": 1000,
+      "userId": 4,
+      "locId": 13,
+      "catId": 18,
+      "id": 6
+    }
+  ]
+}

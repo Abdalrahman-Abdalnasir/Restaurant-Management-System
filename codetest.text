@@ -1,0 +1,710 @@
+<section class="vh-100 bg-image"
+  style="background-image: url('https://mdbcdn.b-cdn.net/img/Photos/new-templates/search-box/img4.webp');">
+  <div class="mask d-flex align-items-center h-100 gradient-custom-3">
+    <div class="container h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-12 col-md-9 col-lg-7 col-xl-6">
+          <div class="card" style="border-radius: 15px;">
+            <div class="card-body p-5">
+              <h2 class="text-uppercase text-center mb-5">Create an account</h2>
+
+              <form>
+
+                <div class="form-outline mb-4">
+                  <input type="text" id="form3Example1cg" class="form-control form-control-lg" />
+                  <label class="form-label" for="form3Example1cg">Your Name</label>
+                </div>
+
+                <div class="form-outline mb-4">
+                  <input type="email" id="form3Example3cg" class="form-control form-control-lg" />
+                  <label class="form-label" for="form3Example3cg">Your Email</label>
+                </div>
+
+                <div class="form-outline mb-4">
+                  <input type="password" id="form3Example4cg" class="form-control form-control-lg" />
+                  <label class="form-label" for="form3Example4cg">Password</label>
+                </div>
+
+                <div class="form-outline mb-4">
+                  <input type="password" id="form3Example4cdg" class="form-control form-control-lg" />
+                  <label class="form-label" for="form3Example4cdg">Repeat your password</label>
+                </div>
+
+                <div class="form-check d-flex justify-content-center mb-5">
+                  <input class="form-check-input me-2" type="checkbox" value="" id="form2Example3cg" />
+                  <label class="form-check-label" for="form2Example3g">
+                    I agree all statements in <a href="#!" class="text-body"><u>Terms of service</u></a>
+                  </label>
+                </div>
+
+                <div class="d-flex justify-content-center">
+                  <button type="button"
+                    class="btn btn-success btn-block btn-lg gradient-custom-4 text-body">Register</button>
+                </div>
+
+                <p class="text-center text-muted mt-5 mb-0">Have already an account? <a href="#!"
+                    class="fw-bold text-body"><u>Login here</u></a></p>
+
+              </form>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+Signup
+////////////
+<template>
+  <form @click.prevent>
+    <div class="row g-3 align-items-center">
+      <div class="col-auto d-block mx-auto">
+        <h1>Sign Up</h1>
+      </div>
+    </div>
+    <div class="row g-3 align-items-center">
+      <div class="col-auto d-block mx-auto">
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Enter Your Name "
+          v-model.trim="name"
+        />
+        <span class="error-feedback" v-if="v$.name.$error">{{
+          v$.name.$errors[0].$message
+        }}</span>
+      </div>
+    </div>
+    <br />
+    <div class="row g-3 align-items-center">
+      <div class="col-auto d-block mx-auto">
+        <input
+          type="email"
+          class="form-control"
+          placeholder="Enter Your Email "
+          v-model.trim="email"
+        />
+        <span class="error-feedback" v-if="v$.email.$error">{{
+          v$.email.$errors[0].$message
+        }}</span>
+      </div>
+    </div>
+    <br />
+    <div class="row g-3 align-items-center">
+      <div class="col-auto d-block mx-auto">
+        <input
+          type="password"
+          class="form-control"
+          placeholder="Enter Your Password "
+          v-model.trim="password"
+        />
+        <span class="error-feedback" v-if="v$.password.$error">{{
+          v$.password.$errors[0].$message
+        }}</span>
+      </div>
+    </div>
+    <br />
+    <div class="row g-3 align-items-center">
+      <div class="col-auto d-block mx-auto">
+        <button type="button" @click="signUpNow()" class="btn btn-primary">
+          Sign Up Now
+        </button>
+        &nbsp;&nbsp;&nbsp;
+        <button
+          type="button"
+          @click="redirectTo({ value: 'LoginV' })"
+          class="btn btn-link"
+        >
+          Sign Up
+        </button>
+      </div>
+    </div>
+  </form>
+</template>
+///////////
+
+Login
+///////////////
+  <form @click.prevent>
+    <div class="row g-3 align-items-center">
+      <div class="col-auto d-block mx-auto">
+        <h1>Login</h1>
+      </div>
+    </div>
+    <br />
+    <div class="row g-3 align-items-center">
+      <div class="col-auto d-block mx-auto">
+        <input
+          type="email"
+          class="form-control"
+          placeholder="Enter Your Email "
+          v-model="state.email"
+        />
+        <span class="error-feedback" v-if="v$.email.$error">{{
+          v$.email.$errors[0].$message
+        }}</span>
+      </div>
+    </div>
+    <br />
+    <div class="row g-3 align-items-center">
+      <div class="col-auto d-block mx-auto">
+        <input
+          type="password"
+          class="form-control"
+          placeholder="Enter Your Password "
+          v-model="state.password"
+        />
+        <span class="error-feedback" v-if="v$.password.$error">{{
+          v$.password.$errors[0].$message
+        }}</span>
+      </div>
+    </div>
+    <br />
+    <div class="row g-3 align-items-center">
+      <div class="col-auto d-block mx-auto">
+        <button type="button" @click="userLogin()" class="btn btn-primary">
+          Login
+        </button>
+        &nbsp;&nbsp;&nbsp;
+        <button
+          type="button"
+          @click="redirectTo({ value: 'SignupV' })"
+          class="btn btn-link"
+        >
+          Sign Up
+        </button>
+      </div>
+    </div>
+    <div class="row g-3 align-items-center">
+      <div class="col-auto d-block mx-auto error-feedback">
+        {{ userNotFoundError }}
+      </div>
+    </div>
+  </form>
+//////////////
+
+profileP
+///////////////
+  <div class="container">
+    <NavbarH />
+    <form @click.prevent>
+      <div class="row g-3 align-items-center">
+        <div class="col-auto d-block mx-auto">
+          <h1>Update Profile</h1>
+          <input
+            disabled
+            type="text"
+            class="form-control"
+            placeholder="Enter Your Name"
+            v-model="name"
+          />
+        </div>
+      </div>
+      <br />
+      <div class="row g-3 align-items-center">
+        <div class="col-auto d-block mx-auto">
+          <input
+            disabled
+            type="email"
+            class="form-control"
+            placeholder="Enter Your Email"
+            v-model="email"
+          />
+        </div>
+      </div>
+      <br />
+      <div class="row g-3 align-items-center">
+        <div class="col-auto d-block mx-auto">
+          <input
+            disabled
+            type="password"
+            class="form-control"
+            placeholder="Enter Your Password"
+            v-model="password"
+          />
+        </div>
+      </div>
+      <br />
+      <div class="row g-3 align-items-center">
+        <div class="col-auto d-block mx-auto">
+          <button
+            type="submit"
+            @click="UpdateProfile()"
+            class="btn btn-primary"
+          >
+            Update Profile Now
+          </button>
+        </div>
+      </div>
+      <br />
+    </form>
+  </div>
+///////////////
+
+UpdateProfile
+////////////////
+  <div class="container">
+    <NavbarH />
+    <section @click.prevent>
+      <div class="mask d-flex align-items-center h-100 gradient-custom-3">
+        <div class="container h-100">
+          <div
+            class="row d-flex justify-content-center align-items-center h-100"
+          >
+            <div class="col-12 col-md-9 col-lg-7 col-xl-6">
+              <div class="card" style="border-radius: 15px">
+                <div class="card-body p-5">
+                  <h2 class="text-uppercase text-center mb-5">
+                    Update Profile
+                  </h2>
+                  <form>
+                    <div class="form-outline mb-4">
+                      <input
+                        type="text"
+                        id="form3Example1cg"
+                        class="form-control form-control-lg"
+                        placeholder="Enter Your Name"
+                        v-model="name"
+                      />
+                      <span class="error-feedback" v-if="v$.name.$error">{{
+                        v$.name.$errors[0].$message
+                      }}</span>
+                      <label class="form-label" for="form3Example1cg"
+                        >Your Name</label
+                      >
+                    </div>
+                    <div class="form-outline mb-4">
+                      <input
+                        type="email"
+                        id="form3Example3cg"
+                        class="form-control form-control-lg"
+                        placeholder="Enter Your Email"
+                        v-model="email"
+                      />
+                      <span class="error-feedback" v-if="v$.email.$error">{{
+                        v$.email.$errors[0].$message
+                      }}</span>
+                      <label class="form-label" for="form3Example3cg"
+                        >Your Email</label
+                      >
+                    </div>
+                    <div class="form-outline mb-4">
+                      <input
+                        type="password"
+                        id="form3Example4cg"
+                        class="form-control form-control-lg"
+                        placeholder="Enter Your Password"
+                        v-model="password"
+                      />
+                      <span class="error-feedback" v-if="v$.password.$error">{{
+                        v$.password.$errors[0].$message
+                      }}</span>
+                      <label class="form-label" for="form3Example4cg"
+                        >Password</label
+                      >
+                    </div>
+                    <div class="row g-3 align-items-center">
+                      <div class="d-flex justify-content-center">
+                        <button
+                          class="btn btn-outline-primary"
+                          type="submit"
+                          @click="UpdateProfileNow()"
+                        >
+                          Update Profile Now
+                        </button>
+                      </div>
+                      <div class="col-auto d-block mx-auto">
+                        <div class="col-auto d-block mx-auto error-feedback">
+                          {{ updateError }}
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+///////////////
+
+
+ Button trigger modal 
+///////////////////
+  <!-- Button trigger modal -->
+  <button
+    type="button"
+    class="btn btn-primary"
+    data-bs-toggle="modal"
+    data-bs-target="#exampleModal"
+  >
+    Add New Restaurant
+  </button>
+
+  <!-- Modal -->
+  <div
+    class="modal fade"
+    id="exampleModal"
+    tabindex="-1"
+    aria-labelledby="exampleModalLabel"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Add New Restaurant</h5>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          ></button>
+        </div>
+        <form @click.prevent>
+          <div class="modal-body">
+            <br />
+            <div class="row g-3 align-items-center">
+              <div class="col-auto d-block mx-auto">
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Restaurant Name "
+                  v-model.trim="state.name"
+                />
+                <span class="error-feedback" v-if="v$.name.$error">{{
+                  v$.name.$errors[0].$message
+                }}</span>
+              </div>
+            </div>
+            <br />
+            <div class="row g-3 align-items-center">
+              <div class="col-auto d-block mx-auto">
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Phone Number"
+                  v-model.trim="state.Phone"
+                />
+                <span class="error-feedback" v-if="v$.Phone.$error">{{
+                  v$.Phone.$errors[0].$message
+                }}</span>
+              </div>
+            </div>
+            <br />
+            <div class="row g-3 align-items-center">
+              <div class="col-auto d-block mx-auto">
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Restaurant Address "
+                  v-model.trim="state.address"
+                />
+                <span class="error-feedback" v-if="v$.address.$error">{{
+                  v$.address.$errors[0].$message
+                }}</span>
+              </div>
+            </div>
+            <br />
+          </div>
+        </form>
+        <div class="modal-footer">
+          <button
+            type="button"
+            class="btn btn-secondary"
+            data-bs-dismiss="modal"
+          >
+            Close
+          </button>
+          <button type="button" @click="addLocation()" class="btn btn-primary">
+            Add Now
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+///////////////////
+
+/////////////////////
+<template>
+  <NavbarH />
+  Add New Restaurant
+  <form @click.prevent>
+    <div class="modal-body">
+      <br />
+      <div class="row g-3 align-items-center">
+        <div class="col-auto d-block mx-auto">
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Restaurant Name "
+            v-model.trim="state.name"
+          />
+          <span class="error-feedback" v-if="v$.name.$error">{{
+            v$.name.$errors[0].$message
+          }}</span>
+        </div>
+      </div>
+      <br />
+      <div class="row g-3 align-items-center">
+        <div class="col-auto d-block mx-auto">
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Phone Number"
+            v-model.trim="state.Phone"
+          />
+          <span class="error-feedback" v-if="v$.Phone.$error">{{
+            v$.Phone.$errors[0].$message
+          }}</span>
+        </div>
+      </div>
+      <br />
+      <div class="row g-3 align-items-center">
+        <div class="col-auto d-block mx-auto">
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Restaurant Address "
+            v-model.trim="state.address"
+          />
+          <span class="error-feedback" v-if="v$.address.$error">{{
+            v$.address.$errors[0].$message
+          }}</span>
+        </div>
+      </div>
+      <br />
+      <div class="row g-3 align-items-center">
+        <div
+          class="col-auto d-block mx-auto alert alert-success"
+          v-if="successMessage.length > 0"
+        >
+          {{ successMessage }}
+        </div>
+      </div>
+      <div class="row g-3 align-items-center">
+        <div
+          class="col-auto d-block mx-auto alert alert-danger"
+          v-if="ErrorMessage.length > 0"
+        >
+          {{ ErrorMessage }}
+        </div>
+      </div>
+    </div>
+    <br />
+    <div class="row g-3 align-items-center">
+      <div class="col-auto d-block mx-auto">
+        <button type="button" @click="addLocation()" class="btn btn-primary">
+          Add Now
+        </button>
+      </div>
+    </div>
+  </form>
+</template>
+/////////////////////
+
+Add New Restaurant
+//////////////////////////////
+<template>
+  <NavbarH />
+  Add New Restaurant
+  <form @click.prevent>
+    <div class="modal-body">
+      <br />
+      <div class="row g-3 align-items-center">
+        <div class="col-auto d-block mx-auto">
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Restaurant Name "
+            v-model.trim="state.name"
+          />
+          <span class="error-feedback" v-if="v$.name.$error">{{
+            v$.name.$errors[0].$message
+          }}</span>
+        </div>
+      </div>
+      <br />
+      <div class="row g-3 align-items-center">
+        <div class="col-auto d-block mx-auto">
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Phone Number"
+            v-model.trim="state.Phone"
+          />
+          <span class="error-feedback" v-if="v$.Phone.$error">{{
+            v$.Phone.$errors[0].$message
+          }}</span>
+        </div>
+      </div>
+      <br />
+      <div class="row g-3 align-items-center">
+        <div class="col-auto d-block mx-auto">
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Restaurant Address "
+            v-model.trim="state.address"
+          />
+          <span class="error-feedback" v-if="v$.address.$error">{{
+            v$.address.$errors[0].$message
+          }}</span>
+        </div>
+      </div>
+      <br />
+      <div class="row g-3 align-items-center">
+        <div
+          class="col-auto d-block mx-auto alert alert-success"
+          v-if="successMessage.length > 0"
+        >
+          {{ successMessage }}
+        </div>
+      </div>
+      <div class="row g-3 align-items-center">
+        <div
+          class="col-auto d-block mx-auto alert alert-danger"
+          v-if="ErrorMessage.length > 0"
+        >
+          {{ ErrorMessage }}
+        </div>
+      </div>
+    </div>
+    <br />
+    <div class="row g-3 align-items-center">
+      <div class="col-auto d-block mx-auto">
+        <button type="button" @click="addLocation()" class="btn btn-primary">
+          Add Now
+        </button>
+      </div>
+    </div>
+  </form>
+</template>
+/////////////////////////////
+
+Delete All Locations
+/////////////////////////////////
+<template>
+  <div class="container">
+    <NavbarH />
+    <form @click.prevent>
+      <div class="row g-3 align-items-center">
+        <div class="col-auto mx-auto d-block">
+          <h1>Delete All Restaurant</h1>
+          <hr />
+          <p class="text-danger">
+            Are You Sure You Want To Delete All Locations?
+          </p>
+          <hr />
+        </div>
+      </div>
+      <div class="row g-3 align-items-center">
+        <div class="col-auto mx-auto d-block">
+          <button class="btn btn-info" @click="goBack()">Go Back</button>
+          &nbsp;&nbsp;&nbsp;
+          <button class="btn btn-danger" @click="deleteAllLocationNew()">
+            Delete All Now
+          </button>
+        </div>
+      </div>
+      <br />
+      <div class="row g-3 align-items-center">
+        <div
+          class="col-auto d-block mx-auto alert alert-warning"
+          v-if="successMessage.length > 0"
+        >
+          {{ successMessage }}
+        </div>
+      </div>
+      <div class="row g-3 align-items-center">
+        <div
+          class="col-auto d-block mx-auto alert alert-danger"
+          v-if="ErrorMessage.length > 0"
+        >
+          {{ ErrorMessage }}
+        </div>
+      </div>
+    </form>
+  </div>
+</template>
+
+<script>
+import NavbarH from "@/components/Header/NavbarH.vue";
+import { mapActions } from "vuex";
+import axios from "axios";
+export default {
+  name: "DeleteAllLocations",
+  components: {
+    NavbarH,
+  },
+  data() {
+    return {
+      userId: "",
+      successMessage: "",
+      ErrorMessage: "",
+      allLocationId: [],
+      allItemsIdIs: [],
+      allCatsIdIs: [],
+    };
+  },
+  async mounted() {
+    let user = localStorage.getItem("user-info");
+    if (!user) {
+      this.redirectTo({ value: "SignUp" });
+    } else {
+      this.userId = JSON.parse(user).id;
+      let result = await axios.get(
+        `http://localhost:3000/locations?userId=${this.userId}`
+      );
+      // console.log(result.data.length);
+      let resultLength = result.data.length;
+      for (var i = 0; i < resultLength; i++) {
+        this.allLocationId.push(result.data[i].id);
+      }
+      // console.table(this.allLocationId);
+    }
+  },
+  methods: {
+    ...mapActions(["redirectTo"]),
+    goBack() {
+      this.redirectTo({ value: "HomeView" });
+    },
+    async deleteAllLocationNew() {
+      let allResults = [];
+      for (var i = 0; i < this.allLocationId.length; i++) {
+        let result = await axios.delete(
+          `http://localhost:3000/locations/${this.allLocationId[i]}`
+        );
+        if (result.status == 200) {
+          allResults.push(true);
+        } else {
+          allResults.push(false);
+        }
+      }
+      // console.log(allResults);
+      if (!allResults.includes(false)) {
+        //All Deleted Successfully
+        this.successMessage = "All Locations Is Deleted...";
+        this.ErrorMessage = "";
+        setTimeout(() => {
+          this.redirectTo({ value: "HomeView" });
+        }, 2000);
+      } else {
+        this.successMessage = "";
+        this.ErrorMessage = "Something Went Wrong, Try Again";
+      }
+    },
+  },
+};
+</script>
+
+/////////////////////////////////
+
+Cd rest-System-2023
+Cd src
+ cd DB  
+json-server --watch db.json
