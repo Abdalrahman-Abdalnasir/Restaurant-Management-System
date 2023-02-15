@@ -1,6 +1,8 @@
 # Restaurant management site
 # Video showing how the idea works
-https://user-images.githubusercontent.com/103172931/219017438-f9d596b6-4719-4950-821e-63cb995c10ca.mp4
+https://user-images.githubusercontent.com/103172931/219017856-779316ae-1461-458e-86e4-2e6ac64abfa4.mp4
+
+
 
 
 
