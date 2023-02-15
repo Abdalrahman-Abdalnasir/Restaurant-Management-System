@@ -1,4 +1,5 @@
-# rest-system-2023
+# Restaurant management site
+https://restaurant-management-sy-ddfdf.web.app
 
 ## Project setup
 ```
